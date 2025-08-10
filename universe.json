@@ -1,0 +1,78 @@
+{
+  "players": [ "player", ],
+  "additionalComponents": {
+    "com.funlabyrinthe.mazes.Mazes:mapCreator": [ "map1", ],
+    "com.funlabyrinthe.mazes.Mazes:transporterCreator": [],
+    "com.funlabyrinthe.mazes.Mazes:boatCreator": [],
+  },
+  "components": {
+    "com.funlabyrinthe.core.Core:player:com.funlabyrinthe.mazes.Player": {
+      "position": [
+        [
+          "com.funlabyrinthe.mazes.Mazes:mapCreator:map1",
+          [ 3, 12, 1, ],
+        ],
+      ],
+    },
+    "com.funlabyrinthe.mazes.Mazes:mapCreator:map1": {
+      "map": {
+        "palette": [
+          [ "com.funlabyrinthe.mazes.Mazes:wall", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
+          [ "com.funlabyrinthe.mazes.Mazes:grass", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:noTool", "myfunlaby.Catacombes:torch", ],
+          [ "com.funlabyrinthe.mazes.Mazes:grass", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
+          [ "com.funlabyrinthe.mazes.Mazes:grass", "com.funlabyrinthe.mazes.Mazes:upStairs", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
+          [ "com.funlabyrinthe.mazes.Mazes:grass", "com.funlabyrinthe.mazes.Mazes:crossroads", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
+          [ "com.funlabyrinthe.mazes.Mazes:grass", "com.funlabyrinthe.mazes.Mazes:treasure", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
+          [ "com.funlabyrinthe.mazes.Mazes:grass", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:goldenBlock", ],
+          [ "com.funlabyrinthe.mazes.Mazes:grass", "myfunlaby.Catacombes:lightSwitch", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
+          [ "com.funlabyrinthe.mazes.Mazes:grass", "com.funlabyrinthe.mazes.Mazes:southArrow", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
+          [ "com.funlabyrinthe.mazes.Mazes:grass", "com.funlabyrinthe.mazes.Mazes:downStairs", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
+          [ "com.funlabyrinthe.mazes.Mazes:grass", "com.funlabyrinthe.mazes.Mazes:directTurnstile", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
+          [ "com.funlabyrinthe.mazes.Mazes:grass", "com.funlabyrinthe.mazes.Mazes:northArrow", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
+          [ "com.funlabyrinthe.mazes.Mazes:grass", "com.funlabyrinthe.mazes.Mazes:indirectTurnstile", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
+          [ "com.funlabyrinthe.mazes.Mazes:grass", "myfunlaby.Catacombes:keyButton", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
+          [ "com.funlabyrinthe.mazes.Mazes:grass", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:noTool", "myfunlaby.Catacombes:closedPorch", ],
+          [ "com.funlabyrinthe.mazes.Mazes:outside", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
+        ],
+        "map": [
+          [
+            [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, ],
+            [ 0, 2, 2, 2, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0, ],
+            [ 0, 2, 2, 2, 0, 2, 0, 0, 2, 0, 2, 2, 2, 0, ],
+            [ 0, 2, 2, 3, 0, 2, 0, 0, 2, 0, 2, 2, 2, 0, ],
+            [ 0, 2, 2, 2, 0, 2, 0, 2, 2, 0, 2, 2, 2, 0, ],
+            [ 0, 2, 2, 2, 0, 2, 0, 2, 0, 0, 2, 0, 0, 0, ],
+            [ 0, 2, 0, 0, 0, 2, 0, 2, 2, 0, 2, 2, 2, 0, ],
+            [ 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 2, 0, ],
+            [ 0, 2, 2, 2, 2, 2, 2, 2, 4, 2, 2, 2, 2, 0, ],
+            [ 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 0, 0, ],
+            [ 0, 2, 0, 5, 6, 2, 0, 0, 2, 2, 2, 2, 2, 0, ],
+            [ 0, 0, 0, 0, 0, 2, 2, 2, 2, 0, 0, 0, 2, 0, ],
+            [ 0, 2, 2, 2, 2, 2, 0, 0, 2, 2, 2, 2, 3, 0, ],
+            [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ],
+          ],
+          [
+            [ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ],
+            [ 0, 2, 2, 2, 2, 2, 0, 0, 7, 2, 2, 2, 2, 0, ],
+            [ 0, 2, 0, 0, 0, 2, 0, 0, 0, 0, 2, 0, 8, 0, ],
+            [ 0, 2, 0, 9, 0, 2, 0, 0, 2, 2, 4, 2, 2, 0, ],
+            [ 0, 2, 0, 2, 0, 2, 0, 0, 2, 0, 2, 0, 0, 0, ],
+            [ 0, 2, 0, 2, 0, 2, 0, 0, 2, 2, 4, 2, 2, 0, ],
+            [ 0, 2, 0, 2, 0, 2, 0, 0, 2, 0, 2, 0, 2, 0, ],
+            [ 0, 2, 0, 2, 0, 2, 0, 0, 2, 0, 2, 0, 2, 0, ],
+            [ 0, 10, 2, 4, 2, 2, 0, 0, 11, 0, 2, 0, 2, 0, ],
+            [ 0, 2, 0, 2, 0, 0, 0, 0, 2, 2, 12, 0, 2, 0, ],
+            [ 0, 2, 0, 2, 2, 2, 0, 0, 8, 0, 2, 2, 2, 0, ],
+            [ 0, 2, 0, 0, 0, 2, 0, 0, 2, 0, 2, 0, 0, 0, ],
+            [ 0, 2, 2, 2, 2, 2, 0, 0, 2, 2, 13, 2, 9, 0, ],
+            [ 0, 0, 14, 0, 0, 0, 0, 0, 0, 14, 0, 0, 0, 0, ],
+          ],
+        ],
+        "outside": [ 15, 15, ],
+      },
+    },
+    "com.funlabyrinthe.core.Core:player": {
+      "plugins": [ "myfunlaby.Catacombes:catacombesViewRestrictionPlugin", ],
+    },
+  },
+}
