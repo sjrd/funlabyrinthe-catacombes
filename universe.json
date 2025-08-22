@@ -16,6 +16,7 @@
     },
     "com.funlabyrinthe.mazes.Mazes:mapCreator:map1": {
       "map": {
+        "dimensions": [ 14, 14, 2, ],
         "palette": [
           [ "com.funlabyrinthe.mazes.Mazes:wall", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:noTool", "com.funlabyrinthe.mazes.Mazes:noObstacle", ],
           [ "com.funlabyrinthe.mazes.Mazes:grass", "com.funlabyrinthe.mazes.Mazes:noEffect", "com.funlabyrinthe.mazes.Mazes:noTool", "myfunlaby.Catacombes:torch", ],
