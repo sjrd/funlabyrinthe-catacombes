@@ -1,20 +1,18 @@
 {
   "players": [ "player", ],
   "additionalComponents": {
-    "com.funlabyrinthe.mazes.Mazes:mapCreator": [ "map1", ],
-    "com.funlabyrinthe.mazes.Mazes:transporterCreator": [],
-    "com.funlabyrinthe.mazes.Mazes:boatCreator": [],
+    "map1": "com.funlabyrinthe.mazes.Map",
   },
   "components": {
     "com.funlabyrinthe.core.Core:player:com.funlabyrinthe.mazes.Player": {
       "position": [
         [
-          "com.funlabyrinthe.mazes.Mazes:mapCreator:map1",
+          "com.funlabyrinthe.core.AdditionalComponents:map1",
           [ 3, 12, 1, ],
         ],
       ],
     },
-    "com.funlabyrinthe.mazes.Mazes:mapCreator:map1": {
+    "com.funlabyrinthe.core.AdditionalComponents:map1": {
       "map": {
         "dimensions": [ 14, 14, 2, ],
         "palette": [
