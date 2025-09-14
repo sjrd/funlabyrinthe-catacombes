@@ -74,14 +74,19 @@ class KeyButton(using ComponentInit) extends PushButton:
   }
 end KeyButton
 
-class LightSwitch(using ComponentInit) extends Switch:
+class LightSwitch(using ComponentInit) extends Switch derives Reflector:
+  var messageShown: Boolean = false
+
+  override def reflect() = autoReflect[LightSwitch]
+
   override def switchOn(context: MoveContext): Unit = {
     import context.*
 
     player.plugins -= catacombesViewRestrictionPlugin
 
-    if isFirstTime(player) then
+    if !messageShown then
       player.showMessage("Et la lumière fut...")
+      messageShown = true
   }
 
   override def switchOff(context: MoveContext): Unit = {
