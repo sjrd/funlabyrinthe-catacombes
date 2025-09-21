@@ -74,10 +74,8 @@ class KeyButton(using ComponentInit) extends PushButton:
   }
 end KeyButton
 
-class LightSwitch(using ComponentInit) extends Switch derives Reflector:
+class LightSwitch(using ComponentInit) extends Switch:
   var messageShown: Boolean = false
-
-  override def reflect() = autoReflect[LightSwitch]
 
   override def switchOn(context: MoveContext): Unit = {
     import context.*
