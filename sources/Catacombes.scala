@@ -7,28 +7,13 @@ import com.funlabyrinthe.mazes.std.*
 
 import user.sjrd.viewrestriction.*
 
-object Catacombes extends Module:
-  override protected def createComponents()(using Universe): Unit =
-    val catacombesViewRestrictionPlugin = new CatacombesViewRestrictionPlugin
-    val closedPorch = new ClosedPorch
-    val torch = new Torch
-    val keyButton = new KeyButton
-    val lightSwitch = new LightSwitch
-  end createComponents
-  
-  def catacombesViewRestrictionPlugin(using Universe): CatacombesViewRestrictionPlugin =
-    myComponentByID("catacombesViewRestrictionPlugin")
-  def closedPorch(using Universe): ClosedPorch =
-    myComponentByID("closedPorch")
-  def torch(using Universe): Torch =
-    myComponentByID("torch")
-  def keyButton(using Universe): KeyButton =
-    myComponentByID("keyButton")
-  def lightSwitch(using Universe): LightSwitch =
-    myComponentByID("lightSwitch")
-end Catacombes
+object Catacombes extends Module
 
-export Catacombes.*
+@definition def catacombesViewRestrictionPlugin(using Universe) = new CatacombesViewRestrictionPlugin
+@definition def closedPorch(using Universe) = new ClosedPorch
+@definition def torch(using Universe) = new Torch
+@definition def keyButton(using Universe) = new KeyButton
+@definition def lightSwitch(using Universe) = new LightSwitch
 
 class CatacombesViewRestrictionPlugin(using ComponentInit) extends ViewRestrictionPlugin:
   override def drawView(corePlayer: CorePlayer, context: DrawContext): Unit =
