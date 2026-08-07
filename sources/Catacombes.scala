@@ -1,7 +1,7 @@
 package myfunlaby
 
 import com.funlabyrinthe.core.*
-import com.funlabyrinthe.core.graphics.*
+import com.funlabyrinthe.core.scene.*
 import com.funlabyrinthe.mazes.*
 import com.funlabyrinthe.mazes.std.*
 
@@ -16,10 +16,11 @@ object Catacombes extends Module
 @definition def lightSwitch(using Universe) = new LightSwitch
 
 class CatacombesViewRestrictionPlugin(using ComponentInit) extends ViewRestrictionPlugin:
-  override def drawView(corePlayer: CorePlayer, context: DrawContext): Unit =
+  override def presentView(corePlayer: CorePlayer, viewSize: Size): SceneUpdateFragment =
     if corePlayer.reified[Player].position.exists(_.pos.z == 0) then
-      super.drawView(corePlayer, context)
-  end drawView
+      super.presentView(corePlayer, viewSize)
+    else
+      SceneUpdateFragment.empty
 end CatacombesViewRestrictionPlugin
 
 class ClosedPorch(using ComponentInit) extends Obstacle:
