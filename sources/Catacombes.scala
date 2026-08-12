@@ -31,7 +31,7 @@ class Torch(using ComponentInit) extends Obstacle:
   painter += "Fields/Wall"
   painter += "Miscellaneous/TorchOn"
 
-  override def pushing(context: MoveContext): Unit = {
+  override def pushing(context: EnteringContext): Unit = {
     import context.*
 
     cancel()
@@ -51,11 +51,11 @@ class Torch(using ComponentInit) extends Obstacle:
 end Torch
 
 class KeyButton(using ComponentInit) extends PushButton:
-  override def buttonDown(context: MoveContext): Unit = {
+  override def buttonDown(context: EnteredContext): Unit = {
     import context.*
 
     enabled = false
-    pos.map(3, 1, 1) = pos.map(3, 1, 1) + goldenKey
+    map(3, 1, 1) += goldenKey
     player.showMessage("Une clef d'or est déposée dans la maison voisine.")
   }
 end KeyButton
@@ -63,7 +63,7 @@ end KeyButton
 class LightSwitch(using ComponentInit) extends Switch:
   var messageShown: Boolean = false
 
-  override def switchOn(context: MoveContext): Unit = {
+  override def switchOn(context: ExecuteContext): Unit = {
     import context.*
 
     player.plugins -= catacombesViewRestrictionPlugin
@@ -73,7 +73,7 @@ class LightSwitch(using ComponentInit) extends Switch:
       messageShown = true
   }
 
-  override def switchOff(context: MoveContext): Unit = {
+  override def switchOff(context: ExecuteContext): Unit = {
     import context.*
 
     player.plugins += catacombesViewRestrictionPlugin
